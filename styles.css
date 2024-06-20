@@ -1,0 +1,243 @@
+* {
+    cursor: cell;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: brown;
+    width: 30%;
+    height: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.cursor-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    pointer-events: none;
+    display: none;
+}
+
+.guess {
+    background-color: burlywood;
+    border-radius: 10px 10px 0px 0px;
+    height: fit-content;
+    width: 100%;
+    padding: 2px;
+}
+
+.colors {
+    background-color: #793f09;
+    border-radius: 0px 0px 10px 10px;
+    height: fit-content;
+    width: 100%;
+    padding: 2px;
+}
+
+.circles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    padding: 5px;
+}
+
+.circles span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(177, 106, 13);
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result {
+    width: 30%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    border-left: 3px solid black;
+    padding-left: 5px;
+}
+
+.result span {
+    width: 20px;
+    height: 20px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+
+.colors div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+}
+
+.colors div div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.4rem 0.8rem;
+    width: 90%;
+    gap: 5px;
+}
+
+.colors div div span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.inner1 span.color1 {
+    background-color: black;
+}
+
+.inner1 span.color2 {
+    background-color: blue;
+}
+
+.inner1 span.color3 {
+    background-color: brown;
+}
+
+.inner1 span.color4 {
+    background-color: yellow;
+}
+
+.inner2 span.color5 {
+    background-color: green;
+}
+
+.inner2 span.color6 {
+    background-color: red;
+}
+
+.inner2 span.color7 {
+    background-color: orange;
+}
+
+.inner2 span.color8 {
+    background-color: purple;
+}
+
+button {
+    background-color: #793f09;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d27e2f;
+}
+
+.winner {
+    display: none;
+}
+
+.looser {
+    display: none;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.empty span {
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    /* color: #ffffff; */
+    background-color: #ffffff;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .circles {
+        width: 80%;
+    }
+
+    .colors div div {
+        padding: 0.2rem 0.4rem;
+    }
+
+    .empty span {
+        width: 15px;
+        height: 15px;
+    }
+
+    .result span {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .circles {
+        width: 90%;
+    }
+
+    .colors div div {
+        padding: 0.1rem 0.2rem;
+    }
+
+    .empty span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .result span {
+        width: 10px;
+        height: 10px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 6px;
+    }
+}
