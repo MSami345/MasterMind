@@ -226,6 +226,7 @@ button:hover {
     .empty span {
         width: 10px;
         height: 10px;
+        font-size: 10px;
     }
 
     .result span {
