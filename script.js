@@ -2,7 +2,7 @@ let selectedColor = "";
 const cursorIndicator = document.querySelector(".cursor-indicator");
 const verifyButton = document.getElementById("verify-button");
 let secretCode = [];
-let currentRowIndex = 7; // Start from the bottom row (0-based index)
+let currentRowIndex = 7; 
 let flag = false;
 
 const colors = [
@@ -100,7 +100,7 @@ const verifyCurrentRow = () => {
 
     const balls = document.querySelectorAll("#empty span");
 
-    // Apply background colors to each span
+    // Apply background colors to each span after win
     balls.forEach((span, index) => {
       span.style.backgroundColor = secretCode[index];
       span.innerHTML = " ";
@@ -128,12 +128,12 @@ document.querySelectorAll(".Reset").forEach((button) => {
   });
 });
 
-// Attach color selection event listeners
+//color selection event listeners
 document.querySelectorAll(".inner1 span, .inner2 span").forEach((span) => {
   if (flag == false) handleColorSelection(span);
 });
 
-// Attach event listeners to update circle colors
+//event listeners to update circle colors
 document.querySelectorAll(".circles span").forEach((span) => {
   if (flag == false) updateCircleColor(span);
 });

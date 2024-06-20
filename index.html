@@ -1,168 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Mind Game</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="winner">
-            <h2 style="color: aliceblue;">Congratulations You have won</h2>
-            <!-- <button class="Reset">Reset Game</button> -->
-        </div>
-        <div class="looser">
-            <h2 style="color: aliceblue;">You lost the game, Better Luck next time</h2>
-            <!-- <button class="Reset">Reset Game</button> -->
-        </div>
-        <button class="Reset">Reset Game</button>
-        <div class="cursor-indicator"></div>
-        <div style="height: 100px;">
-            <h2 style="color: #ffffff;font-weight: 500;">MasterMind Game</h2>
-            <div class="empty" id="empty">
-                <span>?</span>
-                <span>?</span>
-                <span>?</span>
-                <span>?</span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Master Mind Game</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="winner">
+                <h2 style="color: aliceblue;">Congratulations You have won</h2>
+                <!-- <button class="Reset">Reset Game</button> -->
+            </div>
+            <div class="looser">
+                <h2 style="color: aliceblue;">You lost the game, Better Luck next time</h2>
+                <!-- <button class="Reset">Reset Game</button> -->
+            </div>
+            <button class="Reset">Reset Game</button>
+            <div class="cursor-indicator"></div>
+            <div style="height: 100px;">
+                <h2 style="color: #ffffff;font-weight: 500;">MasterMind Game</h2>
+                <div class="empty" id="empty">
+                    <span>?</span>
+                    <span>?</span>
+                    <span>?</span>
+                    <span>?</span>
+                </div>
+            </div>
+            <div class="guess">
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <!-- Repeat rows for guessing -->
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="rows">
+                    <div class="circles">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="result">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <p style="color: #4536a5;font-weight: 700;font-size: 1rem;">Start from here  =></p>
+                <button id="verify-button" style="display: none;">Verify</button>
+            </div>
+            <div class="colors">
+                <p style="padding: 5px;font-weight: 500;font-size: 20px;color: #ffffff;">Colors choice</p>
+                <div>
+                    <div class="inner1">
+                        <span class="color1"></span>
+                        <span class="color2"></span>
+                        <span class="color3"></span>
+                        <span class="color4"></span>
+                    </div>
+                    <div class="inner2">
+                        <span class="color5"></span>
+                        <span class="color6"></span>
+                        <span class="color7"></span>
+                        <span class="color8"></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="guess">
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <!-- Repeat rows for guessing -->
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div class="rows">
-                <div class="circles">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="result">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div> 
-            </div>
-            <p style="color: #312e2e;">Start from here  =></p>
-
-            <button id="verify-button" style="display: none;">Verify</button>
-        </div>
-        <div class="colors">
-            <p style="padding: 5px;font-weight: 500;font-size: 20px;color: #ffffff;">Colors choice</p>
-            <div>
-                <div class="inner1">
-                    <span class="color1"></span>
-                    <span class="color2"></span>
-                    <span class="color3"></span>
-                    <span class="color4"></span>
-                </div>
-                <div class="inner2">
-                    <span class="color5"></span>
-                    <span class="color6"></span>
-                    <span class="color7"></span>
-                    <span class="color8"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
