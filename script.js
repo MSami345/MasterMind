@@ -27,8 +27,8 @@ const generateSecretCode = () => {
 
 // Function to update the cursor indicator position
 const updateCursorPosition = (e) => {
-  cursorIndicator.style.left = `${e.pageX + 2}px`;
-  cursorIndicator.style.top = `${e.pageY + 2}px`;
+  cursorIndicator.style.left = `${e.pageX -10}px`;
+  cursorIndicator.style.top = `${e.pageY -10}px`;
 };
 
 // Function to handle color selection
@@ -48,6 +48,7 @@ const handleColorSelection = (span) => {
 
 // Function to handle updating circle colors
 const updateCircleColor = (circle) => {
+  
   circle.addEventListener("click", () => {
     if (selectedColor !== "") {
       circle.style.backgroundColor = selectedColor;
